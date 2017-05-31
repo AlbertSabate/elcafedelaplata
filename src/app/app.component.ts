@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-cafe',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
+  constructor(translate: TranslateService) {
+    translate.setDefaultLang('es');
+    translate.use('es');
+  }
 }
