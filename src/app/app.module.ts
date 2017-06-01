@@ -5,13 +5,17 @@ import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+// Components
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { IntroComponent } from './intro/intro.component';
-import { HistoryComponent } from './history/history.component';
-import { MenuComponent } from './menu/menu.component';
-import { ContactComponent } from './contact/contact.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HistoryComponent } from './components/history/history.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ContactComponent } from './components/contact/contact.component';
+
+// Pipes
+import { RemoveSpacesPipe } from './pipes/remove-spaces.pipe';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -21,12 +25,13 @@ export function HttpLoaderFactory(http: Http) {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    NavComponent,
     FooterComponent,
-    IntroComponent,
+    HeaderComponent,
     HistoryComponent,
     MenuComponent,
-    ContactComponent
+    ContactComponent,
+    RemoveSpacesPipe
   ],
   imports: [
     BrowserModule,
