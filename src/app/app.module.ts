@@ -8,6 +8,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { IntroComponent } from './intro/intro.component';
+import { HistoryComponent } from './history/history.component';
+import { MenuComponent } from './menu/menu.component';
+import { ContactComponent } from './contact/contact.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -18,7 +22,11 @@ export function HttpLoaderFactory(http: Http) {
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    IntroComponent,
+    HistoryComponent,
+    MenuComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
