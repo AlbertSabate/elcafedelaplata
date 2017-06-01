@@ -26,3 +26,14 @@
     </ul>
   </div>
 </nav>
+scrollSpy animate, maybe it's better do this in css ? :\
+$("#nav ul li a[href^='#']").on('click', function(e) {
+  e.preventDefault();
+
+  // animate
+  $('html, body').animate({
+    scrollTop: $(this.hash).offset().top
+  }, 300, () => {
+    window.location.hash = this.hash;
+  });
+});

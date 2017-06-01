@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HistoryComponent } from './components/history/history.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { FacebookComponent } from './components/facebook/facebook.component';
 
 // Pipes
 import { RemoveSpacesPipe } from './pipes/remove-spaces.pipe';
@@ -31,7 +32,8 @@ export function HttpLoaderFactory(http: Http) {
     HistoryComponent,
     MenuComponent,
     ContactComponent,
-    RemoveSpacesPipe
+    RemoveSpacesPipe,
+    FacebookComponent
   ],
   imports: [
     BrowserModule,
