@@ -1,0 +1,55 @@
+@import '../../assets/styles/variables'
+@import '../../assets/styles/mixins'
+
+
+header
+  position: relative
+  width: 100%
+  background-image: url('../../assets/img/gallery/1920/cafe-2.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  color: $headerTxtColor
+
+  .header-layout
+    display: flex
+    width: 100%
+    height: 100%
+    background-color: $headerLayoutTransparencyColor
+    align-items: center
+    justify-content: center
+
+    .header-title
+      h1
+        font-size: 5vw
+
+        .header-js
+          opacity: 0
+          font-weight: 300
+          transition: .8s linear
+
+          &.header-js-show
+            opacity: 1
+
+        .header-dv
+          opacity: 0
+          transition: .8s linear
+
+          &.header-dv-show
+            opacity: 1
+
+    .go-down
+      position: absolute
+      left: calc(50% - 25px)
+      bottom: 0
+      width: 50px
+      height: 50px
+      margin-bottom: 10px
+      cursor: pointer
+
+      &:not(:hover)
+        animation: shake-delayed 10s infinite
+        animation-delay: 10s
+
+      &:hover
+        animation: bounce 1.5s infinite

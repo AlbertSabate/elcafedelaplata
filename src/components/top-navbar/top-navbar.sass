@@ -1,0 +1,23 @@
+@import '../../assets/styles/variables'
+@import '../../assets/styles/mixins'
+
+
+nav
+  &.navbar
+    width: 100%
+    padding: 25px 40px
+    font-size: .85rem
+    transition: all .3s
+    z-index: 1000
+
+    &.navbar-home
+      .navbar-brand
+        font-size: 2rem
+
+    &:not(.navbar-home)
+      background-color: $navBgColor
+      padding: 10px 15px
+      box-shadow: $navShadow
+
+      .navbar-brand
+        font-size: 1.5rem
